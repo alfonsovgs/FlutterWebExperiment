@@ -1,4 +1,5 @@
 import 'package:flutter_web/material.dart';
+import 'package:portafolio/profile_page.dart';
 
 void main() => runApp(MyApp());
 

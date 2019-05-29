@@ -29,12 +29,31 @@ class ProfilePage extends StatelessWidget {
               largeScreen: Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: <Widget>[
-                  Text("Hola"),
+                  NavHeader(),
+                  SizedBox(height: MediaQuery.of(context).size.height * 0.1),
+                  // ProfileInfo(),
+                  // SizedBox(height: MediaQuery.of(context).size.height * 0.2),
+                  // SocialInfo(),
                 ],
               ),
             ),
           ),
         ),
+      ),
+    );
+  }
+}
+
+class NavHeader extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return ResponsiveWidget(
+      largeScreen: Row(
+        mainAxisAlignment: ResponsiveWidget.isSmallScreen(context) ? MainAxisAlignment.center : MainAxisAlignment.spaceBetween,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: <Widget>[
+          Text("Hello"),
+        ],
       ),
     );
   }
